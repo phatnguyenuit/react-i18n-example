@@ -1,6 +1,7 @@
 import { useCallback } from 'react';
 import { useTranslation, Trans } from 'react-i18next';
 
+import clsx from 'clsx';
 import logo from './logo.svg';
 import './App.css';
 
@@ -30,8 +31,22 @@ function App() {
           {t('title', { defaultValue: 'Learn React' })}
         </a>
         <div className="language-section">
-          <button onClick={changeLanguage('en')}>en</button>
-          <button onClick={changeLanguage('vi')}>vi</button>
+          <button
+            className={clsx('language', {
+              active: i18n.language === 'en',
+            })}
+            onClick={changeLanguage('en')}
+          >
+            en
+          </button>
+          <button
+            className={clsx('language', {
+              active: i18n.language === 'vi',
+            })}
+            onClick={changeLanguage('vi')}
+          >
+            vi
+          </button>
         </div>
       </header>
     </div>

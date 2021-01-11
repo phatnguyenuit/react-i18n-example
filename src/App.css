@@ -36,6 +36,18 @@
   gap: 8px;
 }
 
+.language {
+  outline: none;
+  border: 0;
+}
+
+.language.active {
+  font-weight: bold;
+  color: dodgerblue;
+  text-decoration: underline;
+  transition: 0.5s all;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
